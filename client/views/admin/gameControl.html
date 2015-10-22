@@ -1,0 +1,48 @@
+<template name="gameControl">
+
+	{{> adminHeader}}
+
+	<div class="inner-container">
+		<h1>Game Control</h1>
+		<h2>Get the party started</h2>
+		{{#if buildGameAllowed}}
+
+				<a id="game-control-reset" class="btn btn--primary btn--main-cta game-control-reset" href="#">Reset Game</a>
+
+				{{#if gameNotOver}}
+					<div id="admin-timer" class="current-game__level-timer">0</div>
+					<div id="game-control-controls" class="game-control__controls">
+						<span id="game-control-play" class="game-control__play">Play</span>
+						<span id="game-control-pause" class="h-hidden game-control__pause">Pause</span>
+					</div>
+
+					<div class="current-game">
+					<div class="game-stage-no">{{stageNo}}</div>
+						<div id="admin-current-stage" class="current-game__current-stage">
+							<a href="#" class="question">
+								<span class="questions__question"><span id="admin-current-question"></span>?</span>
+								<span class="questions__answer">Answer: <span id="admin-current-answer"></span></span>
+							</a>
+
+						</div>
+					</div>
+				{{else}}
+					<div id="admin-game-review" class="admin-game-review">
+						<p class="admin-game-review__heading">Game Review</p>
+						{{#each currentGameStage.questions}}
+							<a href="#" class="question">
+								<span class="questions__question">{{question}}?</span>
+								<span class="questions__answer">Answer: {{answer}}</span>
+							</a>
+						{{/each}}
+					</div>
+				{{/if}}
+
+		{{else}}
+
+			<p>Please add some questions before trying to build a game!</p>
+
+		{{/if}}
+
+	</div>
+</template>

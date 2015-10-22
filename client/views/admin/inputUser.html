@@ -1,0 +1,40 @@
+<template name="inputUser">
+	{{> adminHeader}}
+	<div class="inner-container">
+
+	<h1>Edit User</h1>
+	<h2>{{profile.name}}</h2>
+
+	<form id="user-edit-form" class="form">
+
+		<div class="form__actions form__actions--top">
+			<a href="#" class="btn btn--warning action--delete">Delete</a>
+		</div>
+
+		<div class="form__group">
+			<label for="role">Name</label>
+			<input type="text" disabled value="{{profile.name}}">
+		</div>
+
+		<div class="form__group">
+			<label for="role">Nickname</label>
+			<input type="text" disabled value="{{profile.nickname}}">
+		</div>
+
+		<div class="form__group">
+			<label for="role">Role</label>
+			<select id="role"></select>
+		</div>
+
+		<div class="form__actions">
+			<a href="{{pathFor 'admin'}}" class="action action--link">Cancel</a>
+			<button id="save" class="btn btn--primary btn--submit">Save</button>
+		</div>
+	</form>
+
+	</div>
+</template>
+
+<template name="userRoleOptions">
+	<option value="{{value}}" selected="{{selected}}">{{value}}</option>
+</template>

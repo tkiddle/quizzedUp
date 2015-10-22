@@ -1,0 +1,30 @@
+@import 'modules/variables';
+
+@import 'components/forms';
+@import 'components/buttons';
+@import 'components/helpers';
+@import 'components/flash-messages';
+
+@import 'partials/adminNav';
+
+@import 'pages/auth';
+@import 'pages/admin';
+@import 'pages/game';
+@import 'pages/leaderboard';
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-size: 1em;
+	color: #fff;
+	font-family: "fira-sans", sans-serif;
+	font-weight: 300;
+	background-color: #191919;
+}
+
+a {
+	color: inherit;
+	cursor: pointer;
+}

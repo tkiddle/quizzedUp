@@ -1,0 +1,16 @@
+<template name="adminHeader">
+	<nav id="admin-nav" class="admin-nav h-cf">
+		<div class="admin-nav__links">
+			<div id="admin-nav-trigger" class="admin-nav__trigger"></div>
+			<span class="admin-nav__lights"></span>
+		</div>
+
+		<ul id="admin-nav-list" class="admin-nav__list h-hidden">
+			<li class="admin-nav__item" ><a href="{{pathFor 'admin'}}">Dashboard</a></li>
+			<li class="admin-nav__item" ><a href="{{pathFor 'questions'}}">Questions</a></li>
+			<li class="admin-nav__item" ><a href="{{pathFor 'questionsAdd'}}">Add Question</a></li>
+			<li class="admin-nav__item" ><a href="{{pathFor 'users'}}">Users</a></li>
+			<li class="admin-nav__item" ><a href="{{pathFor 'logout'}}">Logout</a></li>
+		</ul>
+	</nav>
+</template>

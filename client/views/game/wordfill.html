@@ -1,0 +1,19 @@
+<template name="wordfill">
+
+	{{> gameHeader stageTime=time}}
+
+	<h1 class="stage__question">{{question}}?</h1>
+
+	{{> clueTrigger}}
+
+	<form id="wordfill-stage" class="form wordfill-stage">
+		<div class="form__group">
+			<label for="role">Answer</label>
+			<input id="wordfill-answer" class="wordfill-stage__answer" type="text"/>
+		</div>
+		<div class="form__actions">
+			<button id="wordfill-submit" class="btn btn--primary">Submit</button>
+		</div>
+	</form>
+
+</template>

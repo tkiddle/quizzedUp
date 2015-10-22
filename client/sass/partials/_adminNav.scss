@@ -1,0 +1,63 @@
+.admin-nav {
+	display: block;
+	width: 100%;
+	background-color: $green;
+	box-sizing: border-box;
+	padding: 12px;
+}
+
+.admin-nav__trigger {
+	height: 32px;
+	width: 35px;
+	background-image: url('../images/burger-menu.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	float: left;
+	cursor: pointer;
+}
+
+.admin-nav__trigger--active {
+	background-position-x: right
+}
+
+.admin-nav__lights {
+	height: 32px;
+	width: 32px;
+	background-image: url('../images/lights.png');
+  background-repeat: no-repeat;
+	background-size: cover;
+	float: right;
+	display: block;
+}
+
+.admin-nav__lights--active {
+	background-position-x: right
+}
+
+.admin-nav__list {
+	z-index: 1;
+	box-sizing: border-box;
+	padding: 60px;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 56px;
+	background-color: #F8FFE5;
+	left: 0;
+}
+
+
+.admin-nav__item {
+
+	margin-bottom: 60px;
+
+	a {
+		cursor: pointer;
+		display: block;
+		text-decoration: none;
+		color: $pink;
+		font-size: 2.2em;
+		font-family: "proxima-nova", sans-serif;
+		font-weight: 800;
+	}
+}

@@ -1,0 +1,31 @@
+<template name="users">
+	{{> adminHeader}}
+	<div class="inner-container">
+		<h1>Users</h1>
+		<h2>{{totalUsers}}</h2>
+		<a href="#" id="delete-players" class="btn btn--warning">Delete all players</a>
+
+
+		<div class="questions-wrapper">
+			<div class="form__group">
+				{{> flashMessage}}
+			</div>
+			{{#each users}}
+				<a href="{{pathFor 'userEdit'}}" class="question">
+					<span class="questions__question">{{profile.name}}</span>
+					<span class="questions__answer">Nickname: {{profile.nickname}}</span>
+					<div class="questions__extra">
+						<span class="questions__info"><span class="info__title">
+							{{#each emails}}
+								{{address}}
+							{{/each}}
+						</span> /</span>
+						<span class="questions__info">r<span class="info__title">{{profile.role}}</span> /</span>
+						<span class="questions__info">s<span class="info__title">{{profile.score}}</span></span>
+					</div>
+				</a>
+			{{/each}}
+		</div>
+	</div>
+</template>
+

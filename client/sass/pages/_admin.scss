@@ -1,0 +1,173 @@
+.admin-page {}
+
+.admin-page .inner-container {
+	padding: 40px;
+}
+
+.admin-page h1 {
+	font-family: "proxima-nova", sans-serif;
+	font-size: 2.8em;
+	color: #fff;
+	font-weight: 800;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.admin-page h2 {
+	font-family: "fira-sans", sans-serif;
+	font-size: 1.6em;
+	font-weight: 100;
+	color: #fff;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.admin-page .container {
+	text-align: center;
+}
+
+// Dashboard
+.admin-grid {
+	position: relative;
+	margin-top: 30px;
+}
+
+.admin-grid__item {
+	width: 50%;
+	float:left;
+	margin-bottom: 44px;
+}
+
+.admin-grid__item  h3{
+	font-size: 1.8em;
+	font-family: "fira-sans", sans-serif;
+	font-weight: 100;
+	margin-bottom: 24px;
+}
+
+.stat-number {
+	font-family: "proxima-nova", sans-serif;
+	font-size: 4em;
+	font-weight: 800;
+}
+
+// Question overview page
+.questions-wrapper {
+	position: relative;
+	margin-top: 60px;
+}
+
+.question {
+	margin-bottom: 80px;
+	text-decoration: none;
+	display: block;
+	cursor: pointer;
+
+	&:hover {
+		.questions__question {
+			color: $pink;
+		}
+	}
+}
+
+.questions__question {
+	color: #fff;
+	display: block;
+	margin-bottom: 10px;
+  font-family: "proxima-nova", sans-serif;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.questions__answer {
+	font-family: "fira-sans", sans-serif;
+	font-size: 1.1em;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.questions__extra {
+	font-size: 0.8em;
+}
+
+.info__title {
+	color: $mustard;
+	font-weight: 400;
+}
+
+// Question input form
+.question-add-form {
+	margin-top: 60px;
+}
+
+.question-add-form .form__actions {
+	display: block;
+	margin-top: 30px;
+	margin-bottom: 60px;
+}
+
+.incorrect-answers-wrap {
+	margin-bottom: 60px;
+}
+
+.question-add-form .incorrect-answers {
+	margin-bottom: 80px;
+}
+
+
+.game-control-reset.disabled {
+	text-decoration: line-through;
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+.game-control__controls {
+	text-align: center;
+}
+
+.game-control__play,
+.game-control__next,
+.game-control__pause {
+	background-image: url('../images/controls.png');
+	height: 120px;
+	width: 120px;
+	display: inline-block;
+	background-size: cover;
+	cursor: pointer;
+	overflow: hidden;
+	text-indent: -999px;
+}
+
+.game-control__pause {
+	background-position: center right;
+}
+
+.game-control__next {
+	background-position: center center;
+}
+
+
+.admin-game-review{}
+
+.admin-game-review__heading{
+	font-size: 32px;
+	font-weight: 700;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	color: $blue;
+}
+
+.current-game__level-timer {
+	font-size: 42px;
+	font-weight: 700;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	color: $mustard;
+}
+
+.game-stage-no {
+	font-size: 2em;
+	font-weight: 700;
+	margin-bottom: 20px;
+	margin-top: 40px;
+}

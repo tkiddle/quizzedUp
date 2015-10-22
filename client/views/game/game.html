@@ -1,0 +1,27 @@
+<template name="game">
+	<div class="inner-container">
+		{{> UI.dynamic template=status}}
+		<div id="stage" class="stage"></div>
+	</div>
+
+</template>
+
+<template name="waiting">
+	<h1>Waiting for the game to begin!</h1>
+	<div><img src="../images/loader.gif" /></div>
+</template>
+
+<template name="preparing">
+	<h1>Get ready for the next question...</h1>
+	<div><img src="../images/loader.gif" /></div>
+</template>
+
+<template name="ended">
+	<h1>The game is over!</h1>
+
+	{{#if finalScore}}
+		<div class="final-user-score">Final score: {{finalScore}}</div>
+	{{/if}}
+
+	<div><a class="btn btn--primary" href="{{pathFor 'leaderboard'}}">Leaderboard</a></div>
+</template>

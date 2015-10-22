@@ -1,0 +1,32 @@
+.auth-page {
+	background-color: $green;
+}
+.auth-page .container {
+	padding: 40px;
+}
+
+.auth-page h1 {
+	font-family: "proxima-nova", sans-serif;
+	font-size: 2.8em;
+	color: #fff;
+	font-weight: 800;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.auth-page h2 {
+	font-family: "fira-sans", sans-serif;
+	font-size: 1.6em;
+	font-weight: 400;
+	color: #fff;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.auth-page .container {
+	text-align: center;
+}
+
+.auth-links {
+	margin-top: 20px;
+}

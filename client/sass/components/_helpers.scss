@@ -1,0 +1,11 @@
+.h-cf {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+.h-hidden {
+	display: none !important;
+}

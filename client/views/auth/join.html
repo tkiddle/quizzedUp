@@ -1,0 +1,26 @@
+<template name="join">
+	<h1>SEO Summit</h1>
+	<h2>Quiz 2015</h2>
+	<form id="join-form" class="form">
+
+		<div class="form__group">
+			{{> flashMessage}}
+		</div>
+
+		<fieldset id="step-one" >
+			<div class="form__group">
+				<label for="fullname">Full name</label>
+				<input id="fullname" type="text" name="name" />
+			</div>
+			<div class="form__group">
+				<label for="nickname">Nickname</label>
+				<input id="nickname" type="text" name="nickname" />
+			</div>
+			<button class="btn btn--default" id="join">Join!</button>
+			<div class="auth-links">
+				<span>Already a member? </span>
+				<a class="action action--link" href="{{pathFor 'login'}}">Login</a>
+			</div>
+		</fieldset>
+	</form>
+</template>

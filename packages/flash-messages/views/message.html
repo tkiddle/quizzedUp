@@ -1,0 +1,29 @@
+<template name="flashMessage">
+	<div id="js-flashMessage">
+		{{#if flash}}
+			{{> flash}}
+		{{/if}}
+	</div>
+</template>
+
+<template name="flashMessageItem">
+	<div class="{{classes}}">
+		{{#if heading}}
+			<header class="flash-message__header">
+				<span class="flash-message__heading">{{heading}}</span>
+			</header>
+		{{/if}}
+		{{#if showClose}}
+			<span class="flash-message__action-close">
+				<i class="fa fa-times"> </i>
+			</span>
+		{{/if}}
+		<span class="flash-message__message">{{message}}</span>
+		{{#if showButtons}}
+			<div class="flash-message__buttons">
+				<button class="flash-message__action-cancel">No</button>
+				<button class="flash-message__action-ok">Yes</button>
+			</div>
+		{{/if}}
+	</div>
+</template>

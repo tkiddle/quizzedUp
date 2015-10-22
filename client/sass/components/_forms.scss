@@ -1,0 +1,76 @@
+.form{}
+
+.form__group {
+	text-align: left;
+	margin-bottom: 20px;
+	width: 100%;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.form fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+.form label {
+	margin-bottom: 10px;
+	display: block;
+	text-align: left;
+	font-size: 1.4em;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form textarea {
+	font-family: inherit;
+	font-weight: 400;
+	width: 100%;
+	background-color: #fff;
+	border: none;
+	border-radius: 6px;
+	height: 42px;
+	padding: 0 10px;
+	font-size: 1.4em;
+	box-sizing: border-box;
+}
+
+.form textarea {
+	height: 300px;
+	resize: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.form .form__checkbox {
+	text-align: left;
+
+	label {
+		display:inline-block;
+		font-size: 0.8em;
+		width: auto;
+	}
+
+	input[type="radio"] {
+		display: inline-block;
+	}
+}
+
+.form__actions {
+	margin-top: 60px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.form__actions--top {
+	margin-top: 30px;
+	margin-bottom: 60px;
+}
+
+.form__actions .btn--submit {
+	margin-left: 20px;
+}

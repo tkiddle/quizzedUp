@@ -1,0 +1,247 @@
+.game-page {
+	position: relative;
+}
+
+.game-page h1 {
+  font-family: "proxima-nova", sans-serif;
+  font-size: 2.8em;
+  color: #fff;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: 60px;
+}
+
+.game-page .inner-container {
+	padding: 40px;
+}
+
+.game-page .container {
+	text-align: center;
+}
+
+.countdown-bar {
+	position: absolute;
+	height: 14px;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.countdown-bar .countdown-bar__inner {
+	background-color: $green;
+	height: 14px;
+	width: 100%;
+}
+
+.game-stats {
+	display: table;
+	width: 100%;
+	margin-bottom: 36px;
+}
+
+.game-stats__stat {
+	display: table-cell;
+	text-align: center;
+
+	> span {
+		display: block;
+		margin-bottom: 6px;
+		position: relative;
+
+		&:last-child {
+			font-weight: 400;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.game-stats__time {
+	color: $green;
+}
+
+.stage {}
+
+.stage .stage__clue-trigger {
+	display: inline-block;
+	background-image: url('../images/clue-trigger.png');
+	background-size: cover;
+	margin-bottom: 40px;
+	width: 52px;
+	height: 52px;
+}
+
+.stage .stage__question {
+	font-family: "fira-sans", sans-serif;
+	font-size: 2.2em;
+	color: #fff;
+	font-weight: 300;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.multichoice-list__item {
+	position: relative;
+
+	a {
+		background-color: #fff;
+		color: #191919;
+		font-family: "fira-sans", sans-serif;
+		border-radius: 4px;
+		padding: 24px 0;
+		font-weight: 300;
+		font-size: 1.8em;
+		text-decoration: none;
+		display: block;
+		cursor: pointer;
+		box-shadow: none;
+		transition: background-color 0.5s linear;
+		transition: box-shadow 0.4s ease;
+	}
+
+	margin-bottom: 20px;
+
+	&:last-child {
+		margin-bottom: none;
+	}
+}
+
+.multichoice-list__item .correct {
+	color: #fff;
+	background-color: $green;
+	box-shadow: 0px 0px 15px $green;
+}
+
+.multichoice-list__item .incorrect {
+	color: darken($mustard, 40%);
+	background-color: $mustard;
+	box-shadow: 0px 0px 15px $mustard;
+}
+
+@-webkit-keyframes allWrong {
+	from {
+		background-color: #fff;
+		color: #191919;
+		box-shadow: none;
+	}
+	to {
+		color: darken($mustard, 40%);
+		background-color: $mustard;
+		box-shadow: 0px 0px 15px $mustard;
+	}
+}
+
+.unanswered .multichoice-list__item a {
+	-webkit-animation: allWrong 0s linear; -webkit-animation-fill-mode:both;
+}
+
+.unanswered .multichoice-list__item:nth-child(1) a{ -webkit-animation-delay: .2s }
+.unanswered .multichoice-list__item:nth-child(2) a{ -webkit-animation-delay: .4s }
+.unanswered .multichoice-list__item:nth-child(3) a{ -webkit-animation-delay: .6s }
+.unanswered .multichoice-list__item:nth-child(4) a{ -webkit-animation-delay: .8s }
+
+
+.incorrect.wordfill-stage__answer,
+.unanswered .wordfill-stage__answer {
+	color: darken($mustard, 40%) !important;
+	background-color: $mustard !important;
+	box-shadow: 0px 0px 15px $mustard;
+	outline: none;
+}
+
+// Score animation attached to the correct answer
+@keyframes oneUpAnswer {
+	from {
+		opacity:1;
+		bottom:25%;
+	}
+	to {
+		opacity:0;
+		bottom:50%;
+		font-size: 6em;
+		display: none;
+	}
+}
+
+@media only screen and (max-width: $bp-2) {
+	// Score animation attached to the correct answer
+	@keyframes oneUpAnswer {
+		from {
+			opacity:1;
+			bottom:25%;
+		}
+		to {
+			opacity:0;
+			bottom:50%;
+			font-size: 3em;
+			display: none;
+		}
+	}
+}
+
+.score-up-answer {
+	color: darken($green, 5);
+	font-size: 2.4em;
+	font-weight: 800;
+	position: absolute;
+	text-align: center;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+}
+
+.score-up-answer--incorrect {
+	color: #fff;
+}
+
+.score-up-answer--active {
+	animation: oneUpAnswer .8s linear backwards;
+}
+
+// Score animation attached to users toal in game header
+@keyframes oneUpScore {
+	from {
+		opacity:1;
+
+	}
+	to {
+		opacity:0;
+		font-size: 3em;
+		display: none;
+	}
+}
+
+@media only screen and (max-width: $bp-2) {
+	@keyframes oneUpScore {
+		from {
+			opacity:1;
+
+		}
+		to {
+			opacity:0;
+			font-size: 1.4em;
+			display: none;
+		}
+	}
+}
+
+.score-up-score {
+	color: #fff;
+	font-size: 2.4em;
+	font-weight: 800;
+	position: absolute;
+	text-align: center;
+	left: 0;
+	right: 0;
+	bottom: -24px;
+	opacity: 0;
+}
+
+.score-up-score--active {
+	animation: oneUpScore .8s linear backwards;
+}
+
+.final-user-score {
+	margin-bottom: 30px;
+}

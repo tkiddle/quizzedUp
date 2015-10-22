@@ -1,0 +1,14 @@
+<template name="multichoice">
+
+	{{> gameHeader stageTime=time}}
+
+	<h1 class="stage__question">{{question}}?</h1>
+
+	{{> clueTrigger}}
+
+		<ul class="multichoice-list">
+			{{#each multichoice}}
+					<li class="multichoice-list__item"><a href="#">{{this}}</a></li>
+			{{/each}}
+		</ul>
+</template>

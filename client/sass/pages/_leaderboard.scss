@@ -1,0 +1,129 @@
+.leaderboard-page {}
+
+.leaderboard-page .inner-container {
+	padding: 40px;
+}
+
+.leaderboard-page h1 {
+	font-family: "proxima-nova", sans-serif;
+	font-size: 2.8em;
+	color: #fff;
+	font-weight: 800;
+	margin-bottom: 10px;
+	text-align: center;
+
+	@media only screen and (min-width: $bp-3) {
+		font-size: 6em;
+		margin-top: 40px;
+	}
+}
+
+.leaderboard-page h2 {
+	font-family: "fira-sans", sans-serif;
+	font-size: 1.6em;
+	font-weight: 100;
+	color: #fff;
+	margin-bottom: 40px;
+	text-align: center;
+
+	@media only screen and (min-width: $bp-3) {
+		font-size: 4em;
+	}
+}
+
+.leaderboard-page .container {
+	text-align: center;
+}
+
+.leaderboard-page  {
+
+	.leaderboard {
+		width: 100%;
+		margin-top: 140px;
+
+		@media only screen and (max-width: $bp-2) {
+			margin-top: 80px;
+		}
+	}
+
+	.leaderboard__header {
+		font-family: "fira-sans", sans-serif;
+		font-size: 1.6em;
+		font-weight: 100;
+
+		@media only screen and (min-width: $bp-3) {
+			font-size: 2.4em;
+		}
+
+		@media only screen and (max-width: $bp-2) {
+			font-size: 1.2em;
+		}
+
+		th {
+			padding-bottom: 40px;
+			width: 33.3%;
+		}
+	}
+
+	.leaderboard__body {
+		td {
+			font-family: "fira-sans", sans-serif;
+			padding-bottom: 20px;
+			font-size: 1.4em;
+			font-weight: 200;
+
+			@media only screen and (min-width: $bp-3) {
+				font-size: 2.6em;
+			}
+
+		}
+
+		tr:nth-child(1) td {
+			font-size: 2.2em;
+			font-weight: 800;
+			color: darken($mustard, 10%);
+
+			@media only screen and (min-width: $bp-3) {
+				font-size: 3.4em;
+			}
+		}
+
+		tr:nth-child(2) td {
+			font-size: 1.8em;
+			font-weight: 600;
+			color: lighten($mustard, 10%);
+
+			@media only screen and (min-width: $bp-3) {
+				font-size: 3em;
+			}
+		}
+
+		tr:nth-child(3) td {
+			font-size: 1.6em;
+			font-weight: 400;
+			color: lighten($mustard, 20%);
+
+			@media only screen and (min-width: $bp-3) {
+				font-size: 2.8em;
+			}
+		}
+	}
+
+	.leaderboard__score {
+		font-weight: 800;
+		font-size: 2em;
+	}
+
+	.leaderboard-no-data {
+		font-size: 1.2em;
+		margin-top: 60px;
+		margin-bottom: 80px;
+
+		@media only screen and (min-width: $bp-3) {
+			font-size: 1.8em;
+			margin-top: 60px;
+			margin-bottom: 80px;
+		}
+	}
+
+}

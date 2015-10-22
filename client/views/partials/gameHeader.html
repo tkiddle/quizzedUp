@@ -1,0 +1,19 @@
+<template name="gameHeader">
+	<div id="countdown-bar" class="countdown-bar">
+		<div class="countdown-bar__inner" style="{{countdownStyles}}"></div>
+	</div>
+	<div class="game-stats">
+		<div class="game-stats__stat game-stats__score">
+			<span>Score</span>
+			<span class="game-stats__score__count">{{score}}</span>
+		</div>
+		<div class="game-stats__stat game-stats__time">
+			<span>TIME LEFT</span>
+			<span id="counter" class="game-stats__time-counter">{{initialTime}}</span>
+		</div>
+		<div class="game-stats__stat game-stats__clues">
+			<span>Clues</span>
+			<span>{{clues}}</span>
+		</div>
+	</div>
+</template>

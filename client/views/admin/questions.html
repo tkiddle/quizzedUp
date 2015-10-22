@@ -1,0 +1,25 @@
+<template name="questions">
+	{{> adminHeader}}
+	<div class="inner-container">
+		<h1>Questions</h1>
+		<h2>{{totalQuestions}}</h2>
+		<div class="questions-wrapper">
+			<form id="question-add-form" class="form question-add-form">
+				<div class="form__actions">
+					<a href="{{pathFor 'questionsAdd'}}" class="btn btn--primary">Add new</a>
+				</div>
+			</form>
+			{{#each questions}}
+				<a href="{{pathFor 'questionsEdit'}}" class="question">
+					<span class="questions__question">{{question}}?</span>
+					<span class="questions__answer">Answer: {{answer}}</span>
+					<div class="questions__extra">
+						<span class="questions__info"><span class="info__title">{{type}}</span> /</span>
+						<span class="questions__info">d<span class="info__title">{{difficulty}}</span> /</span>
+						<span class="questions__info">t<span class="info__title">{{time}}</span></span>
+					</div>
+				</a>
+			{{/each}}
+		</div>
+	</div>
+</template>

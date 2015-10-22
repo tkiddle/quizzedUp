@@ -1,0 +1,84 @@
+<template name="inputQuestion">
+	{{> adminHeader}}
+	<div class="inner-container">
+		{{#if isNewQuestion}}
+			<h1>New Question</h1>
+			<h2>Make it a good'un</h2>
+		{{else}}
+			<h1>Edit Question</h1>
+			<h2>Subtitle</h2>
+		{{/if}}
+		<form id="question-add-form" class="form question-add-form">
+			<div class="form__actions">
+				<a href="#" class="btn btn--warning action--delete">Delete</a>
+			</div>
+			<div class="form__group">
+				<label for="question">Question</label>
+				<textarea id="question" placeholder="i.e. What is the name of Bill Clintons, mothers, cousins, pet hamster?">{{question}}</textarea>
+			</div>
+			<div class="form__group">
+				<label for="clue">Clue</label>
+				<input id="clue" type="text" value="{{clue}}" />
+			</div>
+			<div class="form__group">
+				<label for="time">Time</label>
+				<input id="time" type="text" value="{{time}}"/>
+			</div>
+			<div class="form__group">
+				<label for="difficulty">Difficulty</label>
+				<select id="difficulty"></select>
+			</div>
+			<div class="form__group">
+				<label>Game type</label>
+				<div class="form__checkbox">
+					{{#if isNewQuestion}}
+						<input id="multichoice" type="radio" value="multichoice" name="type" class="multichoice-type" checked/>
+					{{else}}
+						<input id="multichoice" type="radio" value="multichoice" name="type" class="multichoice-type" checked="{{equals 'multichoice' type}}"/>
+					{{/if}}
+					<label for="multichoice">Multichoice</label>
+				</div>
+				<div class="form__checkbox">
+					<input id="wordfill" type="radio" value="wordfill" name="type" checked="{{equals 'wordfill' type}}" />
+					<label for="wordfill">Wordfill</label>
+				</div>
+			</div>
+			<div class="form__group">
+				<label for="answer">Answer</label>
+				<input id="answer" type="text" value="{{answer}}"/>
+			</div>
+			<div id="incorrect-answers" class="incorrect-answers h-hidden">
+				<div class="incorrect-answers-wrap">
+					{{#if isNewQuestion}}
+							{{> incorrectAnswer}}
+					{{else}}
+						{{#each incorrect}}
+							{{> incorrectAnswer}}
+						{{/each}}
+					{{/if}}
+				</div>
+					<a href id="add-more" class="add-more action action--link action--primary">+ Add another</a>
+			</div>
+			<div class="form__actions">
+				<a href="{{pathFor 'admin'}}" class="action action--link">Cancel</a>
+				<button id="save" class="btn btn--success btn--submit">Save</button>
+			</div>
+		</form>
+	</div>
+</template>
+
+<template name="incorrectAnswer">
+	<div class="form__group">
+		<label for="incorrect-one">Incorrect answer</label>
+		{{#if ../isNewQuestion}}
+			<input class="incorrect-answer" type="text" value="" />
+		{{else}}
+			<input class="incorrect-answer" type="text" value="{{this}}" />
+		{{/if}}
+	</div>
+</template>
+
+
+<template name="difficultyOptions">
+	<option value="{{value}}" selected="{{selected}}">{{value}}</option>
+</template>

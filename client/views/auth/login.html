@@ -1,0 +1,22 @@
+<template name="login">
+	<h1>SEO Summit</h1>
+	<h2>Quiz 2015</h2>
+	<form id="login-form" class="form">
+
+	<div class="form__group">
+		{{> flashMessage}}
+	</div>
+
+		<fieldset id="step-one">
+			<div class="form__group">
+				<label for="nickname">nickname</label>
+				<input id="nickname" type="text" name="nickname" />
+			</div>
+			<button class="btn btn--default" id="next">Login</button>
+			<div class="auth-links">
+				<span>Not a member? </span>
+				<a class="action action--link" href="{{pathFor 'join'}}">Join</a>
+			</div>
+		</fieldset>
+	</form>
+</template>

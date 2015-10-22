@@ -1,0 +1,29 @@
+<template name="leaderboard">
+	<div class="inner-container">
+
+		<h1>Leaderboard</h1>
+		<h2>Top 10 players</h2>
+
+		<table class="leaderboard">
+			<thead class="leaderboard__header">
+				<tr>
+					<th>Rank</th>
+					<th>Score</th>
+					<th>Nickname</th>
+				</tr>
+			</thead>
+			<tbody class="leaderboard__body">
+				{{#each users}}
+					<tr>
+						<td>{{beginAtOne @index}}</td>
+						<td class="leaderboard__score">
+							<span class="leaderboard__score__wrap">{{profile.game.score}}</span>
+						</td>
+						<td class="leaderboard__nickname">{{profile.nickname}}</td>
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+
+	</div>
+</template>

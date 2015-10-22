@@ -1,0 +1,52 @@
+.btn {
+	display: inline-block;
+	font-family: "proxima-nova", sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	border-radius: 6px;
+	padding: 12px 60px;
+	text-decoration: none;
+	border: none;
+	text-align: center;
+	cursor: pointer;
+}
+
+.btn--default {
+	background: #fff;
+	color: #000;
+}
+
+.btn--warning {
+	background: $mustard;
+	color: #000;
+}
+
+.btn--success {
+	background: $green;
+	color: #fff;
+}
+
+.btn--primary {
+	background: $pink;
+	color: #fff;
+}
+
+.btn--main-cta {
+	display: inline-block;
+	margin-top: 30px;
+	margin-bottom: 60px;
+}
+
+.action {
+	color: #fff;
+	font-family: "proxima-nova", sans-serif;
+	font-weight: 400;
+}
+
+.action--link {
+	text-decoration: none;
+}
+
+.action--primary {
+	color: $pink;
+}

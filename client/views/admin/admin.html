@@ -1,0 +1,33 @@
+<template name="admin">
+
+	{{> adminHeader}}
+
+	<div class="inner-container">
+		<h1>Dashboard</h1>
+		<h2>Stats</h2>
+		<a class="btn btn--primary btn--main-cta" href="{{pathFor 'gameControl'}}">Game Control</a>
+		<div class="admin-grid h-cf">
+
+			<div class="admin-grid__item">
+				<h3>Questions</h3>
+				<span class="stat-number">{{totalQuestions}}</span>
+			</div>
+
+			<div class="admin-grid__item">
+				<h3>Difficulty</h3>
+				<span class="stat-number">{{averageDifficulty}}</span>
+			</div>
+
+			<div class="admin-grid__item">
+				<h3>Time</h3>
+				<span class="stat-number">{{totalTime}}</span>
+			</div>
+
+			<div class="admin-grid__item">
+				<h3>Players</h3>
+				<span class="stat-number">{{totalPlayers}}</span>
+			</div>
+
+		</div>
+	</div>
+</template>

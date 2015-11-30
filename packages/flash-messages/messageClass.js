@@ -1,7 +1,8 @@
 /**
  *	Adding a flash message couldn't be easier, check out the examples below.
  *
- *	new Message('confirmation', 'Are you sure you want to permanently delete ' + countryName + '?', function() {
+ *	new Message('confirmation', 'Are you sure you want to permanently delete ' +
+ *	countryName + '?', function() {
  *		Countries.remove(that._id);
  *		new Message('success', countryName + ' successfully deleted.');
  *	});

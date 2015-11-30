@@ -1,3 +1,9 @@
+/**
+ * MONOLITHIC OBJECT ALERT! The GAME_CONTROLS object and the methods within it
+ * Is where the majority of the logic behind the game lives (as far as a player
+ * Is concerened). The GAME_CONTROLS object handles UI updates, player scores,
+ * Timer start/stop and rendering stages/questions.
+ */
 
 GAME_CONTROLS = {
 

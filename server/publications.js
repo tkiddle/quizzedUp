@@ -1,5 +1,6 @@
 /**
- * Make our collections public to the client.
+ * In this file we make our collections public to the client. Meteor
+ * Requires that you do this for each collection that needs exposing.
  */
 
 Meteor.publish('questions', function() {

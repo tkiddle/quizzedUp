@@ -9,7 +9,6 @@ Template.gameHeader.helpers({
 	},
 
 	clues: function() {
-
 		return 0
 	}
 });

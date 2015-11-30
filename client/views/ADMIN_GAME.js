@@ -1,3 +1,8 @@
+/**
+ * MONOLITHIC OBJECT ALERT! The ADMIN_GAME_CONTROLS object and the methods
+ * Within It is where the majority of the logic lives for the game from the
+ * Admin/quizmasters perspective.
+ */
 
 ADMIN_GAME_CONTROLS = {
 
